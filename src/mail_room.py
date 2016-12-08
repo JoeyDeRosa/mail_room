@@ -1,6 +1,6 @@
 import sys
 
-LIST_OF_DONORS = {}
+# LIST_OF_DONORS = {}
 
 
 def main():
@@ -43,12 +43,12 @@ def user_prompt():
             print('Please enter 1, 2 or q')
 
 
-def print_list():
-    if len(list(LIST_OF_DONORS.keys())) == 0:
+def print_list(donor_list):
+    if len(list(donor_list.keys())) == 0:
         print('There are no names on the donor list')
-    for name in list(LIST_OF_DONORS.keys()):
+    for name in list(donor_list.keys()):
         print(name)
-    return list(LIST_OF_DONORS.keys())
+    return sorted(list(donor_list.keys()))
 
 
 def check_donor(donor_name):
