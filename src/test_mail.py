@@ -45,4 +45,4 @@ def test_create_report():
     '''Tests that create report calcualates the proper figures'''
     donor_list = {'Bob': [10, 5]}
     from mail_room import create_report
-    assert create_report(donor_list) == {'Bob': [15, 7.5]}
+    assert create_report(donor_list) == {'Bob': [15, 2]}

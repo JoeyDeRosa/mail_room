@@ -36,7 +36,7 @@ def user_prompt(list_of_donors):
             prepare_email(list_of_donors, donor_name)
         elif response == '2':
             create_report(list_of_donors)
-        if response.lower() == 'q':
+        elif response.lower() == 'q':
             sys.exit()
         else:
             print('Please enter 1, 2 or q')
