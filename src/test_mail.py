@@ -39,3 +39,10 @@ def test_prepare_email():
     donor_name = 'Bob'
     from mail_room import prepare_email
     assert prepare_email(donor_list, donor_name) == "Thank you for the donation of 2 to Bob"
+
+
+def test_create_report():
+    '''Tests that create report calcualates the proper figures'''
+    donor_list = {'Bob': [10, 5]}
+    from mail_room import create_report
+    assert create_report(donor_list) == {'Bob': [15, 7.5]}
