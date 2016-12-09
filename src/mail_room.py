@@ -36,7 +36,7 @@ def user_prompt(list_of_donors):
             prepare_email(list_of_donors, donor_name)
         elif response == '2':
             create_report(list_of_donors)
-        if response.lower() == 'q':
+        elif response.lower() == 'q':
             sys.exit()
         else:
             print('Please enter 1, 2 or q')
@@ -70,7 +70,15 @@ def prepare_email(list_of_donors, donor_name):
 
 
 def create_report(list_of_donors):
-    print(list_of_donors)
+    new_dict = {}
+    print('Donor -- Sum -- Num -- Average')
+    for donor in list_of_donors:
+        donor_sum = sum(list_of_donors[donor])
+        num_donat = len(list_of_donors[donor])
+        new_dict[donor] = [donor_sum, num_donat]
+        print(donor, ' -- ', donor_sum, ' -- ', num_donat, ' -- ', \
+        sum(list_of_donors[donor]) / len(list_of_donors[donor]))
+    return new_dict
 
 
 if __name__ == '__main__':
