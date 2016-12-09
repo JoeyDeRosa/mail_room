@@ -8,6 +8,13 @@ def test_print_list():
     assert print_list(donor_list) == ['Bob', 'Jim', 'Ted']
 
 
+def test_print_list_empty():
+    '''Test that print_list notifies an empty list'''
+    donor_list = {}
+    from mailroom import print_list
+    assert print_list(donor_list) == 'Empty'
+
+
 def test_check_donor_present():
     '''Test that check_donor returns if the donor is already in the list.'''
     donor_list = {'Bob': [1, 2], 'Ted': [3, 4], 'Jim': [5, 6]}
