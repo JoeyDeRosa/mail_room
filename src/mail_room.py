@@ -7,7 +7,7 @@ def main():
 
 
 def user_prompt(list_of_donors):
-    """Returns user choice for actions to be taken within program"""
+    """Returns user choice for actions to be taken within program."""
     while(True):
         response = input("Please enter 1 to Send a Thank You, 2 to Create a \
             report or q to Quit: ")
